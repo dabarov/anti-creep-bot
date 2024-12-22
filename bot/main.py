@@ -27,4 +27,3 @@ async def hello(ctx):
 # Run the bot
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 bot.run(BOT_TOKEN)
-
