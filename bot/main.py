@@ -3,7 +3,6 @@ import os
 from discord.ext import commands
 from dotenv import load_dotenv
 
-# Load env variables
 load_dotenv()
 
 # Intents are required for receiving certain events like messages
@@ -21,7 +20,9 @@ async def on_ready():
 
 @bot.command()
 async def hello(ctx):
-    await ctx.send(f"Hello, {ctx.author.name}!")
+    await ctx.send(
+        f"Hello, {ctx.author.name}! {ctx.author.id} {ctx.author.display_name}"
+    )
 
 
 # Run the bot
